@@ -36,3 +36,9 @@ function findEmployeeById(employeeId){
         document.getElementById('employeeDetails').innerHTML = 'no employee has been found with this ID'
     }
 }
+
+function findbyspecialty(){
+    const jsemployee = employees.filter(employee => employee.specialization == 'JavaScript');
+    const showjs = jsemployee.map((employee, index) => `<p>${employee.id}: ${employee.name} - ${employee.department} - ${employee.specialization}</p>`);
+    document.getElementById('employeeDetails').innerHTML = showjs;
+}
